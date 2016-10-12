@@ -1,0 +1,77 @@
+﻿body {
+    background:#3df url("../media/Skyline_Edmonton_Alberta_Canada_04A.jpg") no-repeat fixed center;
+    background-size: cover;
+    width:100%;
+    height:100%;
+    margin:0;
+    padding:0;
+    background-position: bottom;
+}
+
+header{
+    height: 100vh;
+}
+
+footer{
+    height: 100vh;
+}
+
+.main-content {
+    font-family: 'Open sans', sans-serif;
+}
+
+
+.edmonton-skyline {
+    background-image: url("../media/Skyline_Edmonton_Alberta_Canada_04A.jpg");
+}
+
+.content {
+    background: white;
+    margin:auto;
+    opacity: 0.7;
+}
+
+header > h1 {
+    background: transparent;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-family: 'Shrikhand', sans-serif;
+    text-shadow: 2px 2px #999999;
+    font-size: 5em;
+}
+
+.navigation {
+    font-family: 'Open sans', sans-serif;
+    font-size: 36px;
+    display: inline-block;
+}
+
+.navigation li {
+     height: 10vh;
+     vertical-align: middle;
+}
+
+navbar ul.nav-pills > li.active > a {
+    text-decoration: underline;
+    background: none;
+    color: black;
+}
+
+navbar ul.nav-pills > li.active > a:focus {
+    text-decoration: underline;
+    background: none;
+    color: black;
+}
+
+navbar ul.nav-pills li > a {
+    color: black;
+}
+
+navbar ul.nav-pills li > a:hover {
+    background-color: #999999;
+}
+
+navbar ul.nav-pills > li.active > a:hover {
+    background-color: #999999;
+}
