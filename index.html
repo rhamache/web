@@ -6,50 +6,92 @@
 
     <link rel="stylesheet" type="text/css" href="css/site.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Shrikhand|Ubuntu" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Julius+Sans+One|Ubuntu" rel="stylesheet"> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="scripts/site.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Ryan Hamacher</h1>
-        <navbar class="text-center col-xs-12 hidden-xs">
-            <ul class="nav nav-pills navigation">
+    <header class="parallax edmonton-skyline">
+        <nav style="position: fixed;">
+            <h1>Ryan Hamacher</h1>
+            <ul class="list-inline list-unstyled pull-xs-right">
                 <li><a href="#about">About</a></li>
                 <li><a href="#code">Code</a></li>
-                <li><a href="#contact">Contact</a></li>
             </ul>
-        </navbar>
-        <navbar class="text-center col-xs-12 visible-xs">
-            <ul class="nav nav-pills nav-stacked navigation">
-                <li class="active"><a data-toggle="pill" href="#about">About</a></li>
-                <li><a data-toggle="pill" href="#code">Code</a></li>
-                <li><a data-toggle="pill" href="#contact">Contact</a></li>
-            </ul>
-        </navbar>
+        </nav>
+       
+        <div class="header-text">
+            <h2>Edmonton Software Developer</h2>
+        </div>
+        <p class="text-center">
+            <a href="#about" class="scroll">
+                <span class="glyphicon glyphicon-chevron-down"></span>
+            </a>
+        </p>
     </header>
-    <div class="content" style="height: 1000px;">
-        <div class="row">
-            <div class="col-sm-2"></div>
-            <div class="col-sm-8">
-                <div class="row">
-
-                </div>
-                <div class="row main-content">
-                    <div id="about">
-                        <p>About...</p>
-                    </div>
-                    <div id="code">
-                        <p>Code...</p>
-                    </div>
-                    <div id="contact">
-                        <p>Contact...</p>
-                    </div>
-                </div>
+    <div class="container-fluid content-panel">
+        <div class="row" id="about">
+            <h1 class="text-center">About</h1>
+            <hr/>
+            <div class="col-xs-offset-2 col-xs-8 content">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquam sem at velit varius lacinia.
+                    Aenean blandit commodo erat, quis lobortis ante luctus ac. Praesent sed erat sed mi fermentum pellentesque vitae nec
+                    nulla. Integer eget risus ut urna varius consequat. Aliquam sit amet tincidunt mauris, eget scelerisque nisl. Donec
+                    vel dictum sapien. Vivamus eget elementum augue, et consequat lorem. Morbi quis turpis blandit risus feugiat feugiat
+                    sit amet ut libero. Nam elementum, sem id aliquam accumsan, ex nisl laoreet ligula, nec scelerisque dolor nulla a est.
+                    Nam ac vulputate lorem. Mauris vel sem consectetur, convallis purus at, dictum sem.
+                </p>
+                <p>
+                    Mauris nec ipsum et nisi elementum fringilla ut in turpis. Suspendisse pulvinar aliquam dolor eu venenatis.
+                    Suspendisse nec turpis auctor dolor porttitor aliquet imperdiet vel ex. Proin gravida enim quis mi semper sagittis.
+                    Nullam at finibus felis, in consectetur mauris. Maecenas placerat justo id cursus semper. Vivamus rutrum tellus id
+                    dui gravida, vitae ultricies diam facilisis.
+                </p>
+                <p>
+                    Sed imperdiet eu velit vitae varius. Integer volutpat nisl metus, blandit tempus urna interdum nec. Fusce vestibulum
+                    elementum felis in pharetra. Aenean ultrices sollicitudin tellus. Integer laoreet feugiat ultrices. Sed dapibus
+                    eros ac augue imperdiet pharetra. Pellentesque et nunc ac ex viverra cursus. Curabitur sit amet elit in nisl luctus
+                    sollicitudin nec porta lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                    Duis viverra mi eget metus bibendum convallis. Integer quis dignissim arcu, ut blandit eros. Aliquam id sagittis risus.
+                    Quisque felis nulla, dignissim a pharetra et, posuere eget diam. Sed in est libero. Sed ornare tempus lacus et dapibus.
+                    Cras elementum tincidunt est, eget faucibus ex fringilla id.
+                </p>
             </div>
-            <div class="col-sm-2"></div>
         </div>
     </div>
-    <footer></footer>
+    <div class="photo-panel parallax computer-code"></div>
+    <div class="container-fluid content-panel">
+        <div class="row" id="code">
+            <h1 class="text-center">Code</h1>
+            <hr />
+            <div class="col-xs-offset-2 col-xs-8 content">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquam sem at velit varius lacinia.
+                    Aenean blandit commodo erat, quis lobortis ante luctus ac. Praesent sed erat sed mi fermentum pellentesque vitae nec
+                    nulla. Integer eget risus ut urna varius consequat. Aliquam sit amet tincidunt mauris, eget scelerisque nisl. Donec
+                    vel dictum sapien. Vivamus eget elementum augue, et consequat lorem. Morbi quis turpis blandit risus feugiat feugiat
+                    sit amet ut libero. Nam elementum, sem id aliquam accumsan, ex nisl laoreet ligula, nec scelerisque dolor nulla a est.
+                    Nam ac vulputate lorem. Mauris vel sem consectetur, convallis purus at, dictum sem.
+                </p>
+                <p>
+                    Mauris nec ipsum et nisi elementum fringilla ut in turpis. Suspendisse pulvinar aliquam dolor eu venenatis.
+                    Suspendisse nec turpis auctor dolor porttitor aliquet imperdiet vel ex. Proin gravida enim quis mi semper sagittis.
+                    Nullam at finibus felis, in consectetur mauris. Maecenas placerat justo id cursus semper. Vivamus rutrum tellus id
+                    dui gravida, vitae ultricies diam facilisis.
+                </p>
+                <p>
+                    Sed imperdiet eu velit vitae varius. Integer volutpat nisl metus, blandit tempus urna interdum nec. Fusce vestibulum
+                    elementum felis in pharetra. Aenean ultrices sollicitudin tellus. Integer laoreet feugiat ultrices. Sed dapibus
+                    eros ac augue imperdiet pharetra. Pellentesque et nunc ac ex viverra cursus. Curabitur sit amet elit in nisl luctus
+                    sollicitudin nec porta lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                    Duis viverra mi eget metus bibendum convallis. Integer quis dignissim arcu, ut blandit eros. Aliquam id sagittis risus.
+                    Quisque felis nulla, dignissim a pharetra et, posuere eget diam. Sed in est libero. Sed ornare tempus lacus et dapibus.
+                    Cras elementum tincidunt est, eget faucibus ex fringilla id.
+                </p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

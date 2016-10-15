@@ -1,15 +1,43 @@
-﻿body {
-    background:#3df url("../media/Skyline_Edmonton_Alberta_Canada_04A.jpg") no-repeat fixed center;
-    background-size: cover;
-    width:100%;
-    height:100%;
-    margin:0;
-    padding:0;
-    background-position: bottom;
+﻿.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Julius Sans One', sans-serif !important;
+}
+
+header > p {
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+}
+
+header .scroll {
+    color: white;
+    font-size: 2em;
+}
+
+header .scroll:hover {
+    color: #aaaaaa;
+}
+
+header .scroll:focus {
+    color: #aaaaaa;
+}
+
+.scroll {
+    color: #333;
+    font-size: 2em;
 }
 
 header{
     height: 100vh;
+}
+
+.photo-panel {
+    height: 80vh;
+}
+
+.parallax {
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
 }
 
 footer{
@@ -25,53 +53,72 @@ footer{
     background-image: url("../media/Skyline_Edmonton_Alberta_Canada_04A.jpg");
 }
 
-.content {
+.computer-code {
+    background-image: url("../media/js-code.jpg");
+}
+
+.content-panel {
     background: white;
     margin:auto;
     opacity: 0.7;
-}
-
-header > h1 {
-    background: transparent;
-    width: 100%;
-    text-align: center;
-    color: white;
-    font-family: 'Shrikhand', sans-serif;
-    text-shadow: 2px 2px #999999;
-    font-size: 5em;
-}
-
-.navigation {
     font-family: 'Open sans', sans-serif;
-    font-size: 36px;
+}
+
+header div.header-text {
+    position: absolute;
+    z-index: 2;
+    top: 20%;
+    left: 7%;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+header div.header-text h2 {
+    font-size: 3em;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    z-index: 9999;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px 0px;
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+nav > h1 {
+    text-align: left;
+    color: black;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    font-size: 2em;
+    margin: 10px;
     display: inline-block;
 }
 
-.navigation li {
-     height: 10vh;
-     vertical-align: middle;
+nav > ul {
+    float: right;
+    padding: 10px 40px;
+    margin-right: 100px;
 }
 
-navbar ul.nav-pills > li.active > a {
-    text-decoration: underline;
-    background: none;
-    color: black;
+nav > ul a {
+    color: #333;
 }
 
-navbar ul.nav-pills > li.active > a:focus {
-    text-decoration: underline;
-    background: none;
-    color: black;
+nav > ul a:hover {
+    color: #000;
 }
 
-navbar ul.nav-pills li > a {
-    color: black;
+nav > ul a:active, nav > ul a:focus, nav > ul a:visited {
+    color: #333 !important;
 }
 
-navbar ul.nav-pills li > a:hover {
-    background-color: #999999;
+.content p{
+    text-indent: 30px;
+    margin-bottom: 20px;
 }
 
-navbar ul.nav-pills > li.active > a:hover {
-    background-color: #999999;
+.content {
+    padding-bottom: 50px;
 }
