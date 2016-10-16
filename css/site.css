@@ -141,3 +141,23 @@ nav > ul a:active, nav > ul a:focus, nav > ul a:visited {
 .content {
     padding-bottom: 50px;
 }
+
+.icon {
+    height: 64px;
+    width: 64px;
+    background-size: 64px 64px !important;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.icon-linkedin {
+    background: url("../media/icons/Linked-in.png")
+}
+
+.icon-email {
+    background: url("../media/icons/@.png")
+}
+
+.icon-github {
+    background: url("../media/icons/Share.png")
+}
