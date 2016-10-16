@@ -8,6 +8,25 @@ header > p {
     width: 100%;
 }
 
+hr { 
+  border-top: 1px solid #8c8b8b !important;
+  padding: 6px;
+} 
+
+.flip-color{
+    background-color: #333 !important;
+    color: white;
+}
+
+h1.large-heading {
+    font-size: 54px;
+    margin-bottom: 20px;
+}
+
+.lead {
+    font-size: 21px;
+}
+
 header .scroll {
     color: white;
     font-size: 2em;
