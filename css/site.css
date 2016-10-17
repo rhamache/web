@@ -1,5 +1,10 @@
-﻿.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+﻿.h1, h1 {
     font-family: 'Julius Sans One', sans-serif !important;
+}
+
+.h2, h2 {
+    font-family: 'Open sans', sans-serif;
+    margin-bottom: 20px !important;
 }
 
 header > p {
@@ -50,7 +55,7 @@ header{
 }
 
 .photo-panel {
-    height: 80vh;
+    height: 100vh;
 }
 
 .parallax {
@@ -78,7 +83,7 @@ footer{
 
 .content-panel {
     background: white;
-    margin:auto;
+    margin: auto;
     opacity: 0.7;
     font-family: 'Open sans', sans-serif;
 }
@@ -95,6 +100,7 @@ header div.header-text {
 
 header div.header-text h2 {
     font-size: 3em;
+    font-family: 'Julius Sans One', sans-serif;
 }
 
 nav {
@@ -134,7 +140,6 @@ nav > ul a:active, nav > ul a:focus, nav > ul a:visited {
 }
 
 .content p{
-    text-indent: 30px;
     margin-bottom: 20px;
 }
 
@@ -160,4 +165,43 @@ nav > ul a:active, nav > ul a:focus, nav > ul a:visited {
 
 .icon-github {
     background: url("../media/icons/Share.png")
+}
+
+.icon-www {
+    background: url("../media/icons/WWW.png")
+}
+
+ul.links {
+    display: inline-block;
+    margin: 0 20px;
+    width: 100%;
+}
+
+ul.links li{
+    margin: 20px 0;
+    text-align: center;
+}
+
+ul.links li a span {
+     vertical-align: middle;
+}
+
+.experience h3 {
+    margin-top: 10px;
+}
+
+.experience h4 {
+    font-weight: 700;
+}
+
+.contact div:first-child {
+    text-align: right;
+}
+
+.contact div:last-child {
+    text-align: left;
+}
+
+.contact a span {
+    vertical-align: middle;
 }
