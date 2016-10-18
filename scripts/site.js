@@ -1,7 +1,7 @@
 ﻿$(function () {
 
     // scroll effect for anchors
-    $('a[href*="#"]:not([href="#"])').click(function () {
+    $('a[href*="#"]:not([href="#"],[href="#code-carousel"])').click(function () {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
             var target = $(this.hash);
             var nav = $("nav")
@@ -12,6 +12,19 @@
                 }, 1000);
                 return false;
             }
+        }
+    });
+
+    $(window).on('scroll', function () {
+        var y = window.pageYOffset;
+        var about = $("#about");
+        var aboutTop = about.offset().top;
+        var aboutHeight = about.outerHeight();
+
+        if (y > (aboutTop - 250)) {
+            $("#about .portrait").addClass("zoomout");
+        } else {
+            $("#about .portrait").removeClass("zoomout");
         }
     });
 });

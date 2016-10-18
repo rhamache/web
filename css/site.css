@@ -205,3 +205,33 @@ ul.links li a span {
 .contact a span {
     vertical-align: middle;
 }
+
+.about h2 {
+    margin-top: 0;
+}
+
+.portrait {
+    background-image: url("../media/ryanhamacher.jpg");
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    background-position: center center;
+    background-size: 130%;
+    border: 5px solid #333;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+    overflow: hidden;
+    transition: all .3s linear;
+    margin: 10px auto 20px;
+    position: relative;
+}
+
+.portrait.zoomout {
+  background-size: 100%;
+}
+
+#code-carousel{
+    box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+    border: 5px solid #333;
+    border-radius: 10px;
+    padding: 20px 0;
+}
