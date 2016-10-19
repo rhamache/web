@@ -194,6 +194,18 @@ ul.links li a span {
     font-weight: 700;
 }
 
+.flip-color a {
+    color: #74a9d8;
+}
+
+.flip-color a:hover, .experience a:focus {
+    color: #3884c7;
+}
+
+
+.contact div:first-child {
+    text-align: right;
+}
 @media (min-width: 992px) {
     .contact div:first-child {
         text-align: right;
