@@ -148,9 +148,6 @@ nav > ul a:active, nav > ul a:focus, nav > ul a:visited {
 }
 
 .icon {
-    height: 32px;
-    width: 32px;
-    background-size: 32px 32px !important;
     display: inline-block;
     margin-right: 20px;
     box-shadow: 2px 2px 5px rgba(0,0,0,.3);
@@ -274,4 +271,8 @@ ul.links li a span {
     border-top: solid 40px #333;
     border-left: solid 50px transparent;
     border-right: solid 50px transparent;
+}
+
+.btn-group-sm > .btn, .btn-sm.icon {
+    padding: 7px 10px; 
 }
