@@ -84,7 +84,6 @@ footer{
 .content-panel {
     background: white;
     margin: auto;
-    opacity: 0.7;
     font-family: 'Open sans', sans-serif;
 }
 
@@ -148,27 +147,28 @@ nav > ul a:active, nav > ul a:focus, nav > ul a:visited {
 }
 
 .icon {
-    height: 64px;
-    width: 64px;
-    background-size: 64px 64px !important;
+    height: 32px;
+    width: 32px;
+    background-size: 32px 32px !important;
     display: inline-block;
     margin-right: 20px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.3);
 }
 
 .icon-linkedin {
-    background: url("../media/icons/Linked-in.png")
+    background: url("../media/icons/32px/linkedin.png")
 }
 
 .icon-email {
-    background: url("../media/icons/@.png")
+    background: url("../media/icons/32px/email.png")
 }
 
 .icon-github {
-    background: url("../media/icons/Share.png")
+    background: url("../media/icons/32px/sharethis.png")
 }
 
 .icon-www {
-    background: url("../media/icons/WWW.png")
+    background: url("../media/icons/32px/stackoverflow.png")
 }
 
 ul.links {
@@ -203,17 +203,9 @@ ul.links li a span {
 }
 
 
-.contact div:first-child {
-    text-align: right;
-}
-@media (min-width: 992px) {
-    .contact div:first-child {
-        text-align: right;
-    }
-
-    .contact div:last-child {
-        text-align: left;
-    }
+.contact li {
+    margin-bottom: 20px;
+    min-width: 250px;
 }
 
 .contact a span {
@@ -242,8 +234,8 @@ ul.links li a span {
 
 @media (max-width: 992px) {
     .portrait {
-        width: 600px;
-        height: 600px;
+        width: 300px;
+        height: 300px;
     }
 
     .info {
@@ -267,6 +259,14 @@ ul.links li a span {
     padding: 20px 0;
 }
 
-.contact ul li {
-    text-align: left;
+#experience-container:after {
+    position: absolute;
+    left: 50%;
+    margin-left: -25px;
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: solid 40px #333;
+    border-left: solid 50px transparent;
+    border-right: solid 50px transparent;
 }
