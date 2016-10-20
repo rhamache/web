@@ -26,5 +26,17 @@
         } else {
             $("#about .portrait").removeClass("zoomout");
         }
+
+        var wndH = $(window).height() - 200;
+
+        $("#abilities ul li span.fa").each(function (i, el) {
+            var el = $(el);
+            var top = el.offset().top
+            if (y > top - wndH) {
+                el.addClass("slidein");
+            } else {
+                el.removeClass("slidein");
+            }
+        });
     });
 });
