@@ -258,7 +258,10 @@ span.stars {
     text-align: right;
 }
 
-@media (min-width: 992px) {
+#abilities {
+    overflow: hidden;
+}
+
     #abilities ul > li span.fa:nth-child(2) {
         transform: translateX(100vw);
         transition: all 1.5s ease-in-out;
@@ -308,7 +311,7 @@ span.stars {
         transform: translateX(0vw);
         transition: all 1.5s ease-in-out;
     }
-}
+
 
 .skill-header {
     text-align: center;
