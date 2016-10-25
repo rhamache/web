@@ -58,6 +58,28 @@ header{
     height: 100vh;
 }
 
+.code-carousel-img img {
+  width: auto;
+  height: 400px;
+  max-height: 400px;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    margin: auto;
+}
+
+.carousel-control .icon-prev, .carousel-control .icon-next, 
+.carousel-control .glyphicon-chevron-left, .carousel-control 
+.glyphicon-chevron-right, .glyphicon-circle-arrow-left, 
+.carousel-control .fa-chevron-left, 
+.carousel-control .fa-chevron-right {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+}
+
 .parallax {
     background-size: cover;
     background-position: bottom;
@@ -73,9 +95,12 @@ footer{
     font-family: 'Open sans', sans-serif;
 }
 
+.macro-abstract {
+    background-image: url("../media/SplitShire-3090144.jpg");
+}
 
-.edmonton-skyline {
-    background-image: url("../media/Skyline_Edmonton_Alberta_Canada_04A.jpg");
+.carlights {
+    background-image: url('../media/splitshire-2851.jpg');
 }
 
 .computer-code {
@@ -93,14 +118,15 @@ header div.header-text {
     z-index: 2;
     top: 20%;
     left: 7%;
-    text-align: center;
+    text-align: left;
     color: #fff;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 1.5em;
 }
 
 header div.header-text h2 {
     font-size: 3em;
-    font-family: 'Julius Sans One', sans-serif;
 }
 
 nav {
@@ -110,6 +136,24 @@ nav {
     z-index: 9999;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px 0px;
     font-family: 'Julius Sans One', sans-serif;
+    border: 0 !important;
+}
+
+nav .navbar-brand {
+    background-color: #333;
+    color: #fff !important;
+}
+
+
+nav .navbar-brand:hover {
+    background-color: #333 !important;
+    color: #ccc !important;
+}
+
+
+nav .navbar-brand:focus, nav .navbar-brand:active, nav .navbar-brand:visited{
+    background-color: #333 !important;
+    color: #fff !important;
 }
 
 nav > h1 {
@@ -258,67 +302,58 @@ span.stars {
     text-align: right;
 }
 
-#abilities {
-    overflow: hidden;
+.star0 {
+    transform: translateX(100vw);
+    transition: all 1.5s ease-in-out;
 }
 
-    #abilities ul > li span.fa:nth-child(2) {
-        transform: translateX(100vw);
-        transition: all 1.5s ease-in-out;
-    }
+.slidein0 {
+    transform: translateX(0vw);
+    transition: all 1.1s ease-in-out;
+}
 
-    #abilities ul > li span.fa.slidein:nth-child(2) {
-        transform: translateX(0vw);
-        transition: all 1.1s ease-in-out;
-    }
+.star1 {
+    transform: translateX(100vw);
+    transition: all 1.4s ease-in-out;
+}
 
-    #abilities ul > li span.fa:nth-child(3) {
-        transform: translateX(100vw);
-        transition: all 1.4s ease-in-out;
-    }
+.slidein1 {
+    transform: translateX(0vw);
+    transition: all 1.2s ease-in-out;
+}
 
-    #abilities ul > li span.fa.slidein:nth-child(3) {
-        transform: translateX(0vw);
-        transition: all 1.2s ease-in-out;
-    }
+.star2 {
+    transform: translateX(100vw);
+    transition: all 1.3s ease-in-out;
+}
 
-    #abilities ul > li span.fa:nth-child(4) {
-        transform: translateX(100vw);
-        transition: all 1.3s ease-in-out;
-    }
+.slidein2 {
+    transform: translateX(0vw);
+    transition: all 1.3s ease-in-out;
+}
 
-    #abilities ul > li span.fa.slidein:nth-child(4) {
-        transform: translateX(0vw);
-        transition: all 1.3s ease-in-out;
-    }
+.star3 {
+    transform: translateX(100vw);
+    transition: all 1.2s ease-in-out;
+}
 
-    #abilities ul > li span.fa:nth-child(5) {
-        transform: translateX(100vw);
-        transition: all 1.2s ease-in-out;
-    }
+.slidein3 {
+    transform: translateX(0vw);
+    transition: all 1.4s ease-in-out;
+}
 
-    #abilities ul > li span.fa.slidein:nth-child(5) {
-        transform: translateX(0vw);
-        transition: all 1.4s ease-in-out;
-    }
+.star4 {
+    transform: translateX(100vw);
+    transition: all 1.1s ease-in-out;
+}
 
-    #abilities ul > li span.fa:nth-child(6) {
-        transform: translateX(100vw);
-        transition: all 1.1s ease-in-out;
-    }
-
-    #abilities ul > li span.fa.slidein:nth-child(6) {
-        transform: translateX(0vw);
-        transition: all 1.5s ease-in-out;
-    }
-
+.slidein4 {
+    transform: translateX(0vw);
+    transition: all 1.5s ease-in-out;
+}
 
 .skill-header {
     text-align: center;
-}
-
-@keyframes slidein {
-  to { transform: translateY(0); }
 }
 
 #abilities ul > li span.fa.filled {
@@ -326,7 +361,8 @@ span.stars {
 }
 
 #abilities {
-    padding-bottom: 20px;
+    padding-bottom: 70px;
+    overflow: hidden;
 }
 
 #abilities li {
@@ -335,6 +371,10 @@ span.stars {
 
 #abilities h3 {
     margin-top: 0;
+}
+
+#code {
+    padding-bottom: 70px;
 }
 
 .nopadding{
@@ -347,12 +387,11 @@ span.stars {
 
 #code-carousel{
     box-shadow: 2px 2px 5px rgba(0,0,0,.3);
-    border: 5px solid #333;
     border-radius: 10px;
     padding: 20px 0;
 }
 
-#experience-container:after {
+#experience-container:after, #code-container:after {
     position: absolute;
     left: 50%;
     margin-left: -50px;
