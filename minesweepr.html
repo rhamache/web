@@ -143,10 +143,17 @@
             $(".gamebtn").click(function () {
                 self.gameButtonClicked($(this));
             });
+            $(".gamebtn").bind("contextmenu",function(e){
+                e.preventDefault();
+                self.gameButtonRightClicked($(this));
+            });
         }
 
         MinesweeperGame.prototype.gameButtonClicked = function(theButton) {
             var self = this;
+            if (theButton.hasClass("fa-flag")) {
+                return;
+            }
 
             var row = theButton.data("row");
             var col = theButton.data("col");
@@ -165,6 +172,10 @@
 
                 if (self.revealedCount === (self.width * self.height) - self.mineCount) {
                     alert("You win!");
+                    $.each($(".gamebtn"), function (i, v) {
+                        $(v).addClass("disabled");
+                        $(v).attr("disabled", "true");
+                    });
                 }
             }
         }
@@ -173,6 +184,7 @@
             if (theButton.hasClass("revealed")) {
                 return;
             }
+            theButton.removeClass("fa fa-question fa-flag");
             theButton.addClass("revealed");
             theButton.addClass("active");
 
@@ -225,6 +237,19 @@
             }
 
             return count;
+        }
+
+        MinesweeperGame.prototype.gameButtonRightClicked = function (theButton) {
+            if (theButton.hasClass("fa-flag")) {
+                theButton.removeClass("fa-flag");
+                theButton.addClass("fa-question");
+            } else if (theButton.hasClass("fa-question")) {
+                theButton.removeClass("fa-question");
+                theButton.removeClass("fa");
+            } else {
+                theButton.addClass("fa");
+                theButton.addClass("fa-flag");
+            }
         }
     </script>
 </body>
