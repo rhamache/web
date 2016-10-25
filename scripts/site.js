@@ -17,14 +17,14 @@
 
     $(window).on('scroll', function () {
         var y = window.pageYOffset;
-        var about = $("#about");
-        var aboutTop = about.offset().top;
-        var aboutHeight = about.outerHeight();
+        var portrait = $(".portrait");
+        var portraitTop = portrait.offset().top;
+        var portraitHeight = portrait.outerHeight();
 
-        if (y > (aboutTop - 250)) {
-            $("#about .portrait").addClass("zoomout");
+        if (y > (portraitTop - 350)) {
+            portrait.addClass("zoomout");
         } else {
-            $("#about .portrait").removeClass("zoomout");
+            portrait.removeClass("zoomout");
         }
 
         var wndH = $(window).height() - 200;
