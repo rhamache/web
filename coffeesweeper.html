@@ -1,23 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Ryan Hamacher - Software Developer</title>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>CoffeeSweeper</title>
 
     <link rel="shortcut icon" type="image/x-icon" href="media/icons/WWW.png" />
     <link rel="stylesheet" type="text/css" href="css/site.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css">
     <link rel="apple-touch-icon" href="/media/icons/WWW.png">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Julius+Sans+One|Ubuntu" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="scripts/site.js"></script>
 
-    <meta property="description" content="Ryan Hamacher is a creative software developer from Edmonton, Alberta" />
-    <meta property="og:title" content="Ryan Hamacher - Software Developer" />
+    <meta property="description" content="CoffeeSweeper - A minesweeper clone" />
+    <meta property="og:title" content="CoffeeSweeper - A minesweeper clone" />
     <meta property="og:type" content="website" />
-    <meta property="og:description" content="Ryan Hamacher is a creative software developer from Edmonton, Alberta" />
+    <meta property="og:description" content="CoffeeSweeper is a recreation of the classic windows game, minesweeper." />
     <meta property="og:url" content="http://www.ryanhamacher.com" />
     <meta property="og:image" content="http://www.ryanhamacher.com/media/ryanhamacher.jpg" />
 </head>
@@ -34,13 +35,19 @@
 
         #game-area {
             margin-bottom: 200px;
+            margin-top: 20px;
         }
     </style>
 
-    <div id="game-area" class="container">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+            <div id="game-area">
 
+            </div>
+        </div>
+        </div>
     </div>
-
     <script type="text/javascript">
         $(function () {
             var game = new MinesweeperGame("game-area");
@@ -159,7 +166,7 @@
             var col = theButton.data("col");
             if (self.mineArr[row][col] === true) {
                 theButton.removeClass("btn-default");
-                theButton.addClass("btn-danger");
+                theButton.addClass("btn-danger fa fa-coffee");
 
                 alert("You lost!");
 
