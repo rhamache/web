@@ -277,27 +277,11 @@ ul.links li a span {
     transition: all .3s linear;
     margin: 10px auto 20px;
     position: relative;
+    max-width: 100%;
+    max-height: auto;
 }
 
 
-@media (max-width: 992px) {
-    .portrait {
-        width: 300px;
-        height: 300px;
-    }
-
-    .info {
-        text-align: center;
-    }
-
-    body .content{
-        font-size: 1.5em !important;
-    }
-
-    .parallax {
-        background-attachment: scroll;
-    }
-}
 
 span.stars {
     float: right;
@@ -431,4 +415,28 @@ span.stars {
 
 .btn-group-sm > .btn, .btn-sm.icon {
     padding: 7px 10px; 
+}
+
+@media (max-width: 992px) {
+    .portrait {
+        width: 300px;
+        height: 300px;
+    }
+
+    .info {
+        text-align: center;
+    }
+
+    body .content{
+        font-size: 1.5em !important;
+    }
+
+    .parallax {
+        background-attachment: scroll;
+    }
+
+    #abilities li {
+        margin: 15px 0;
+    }
+
 }
