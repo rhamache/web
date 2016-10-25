@@ -125,6 +125,12 @@ header div.header-text {
     font-size: 1.5em;
 }
 
+@media (max-width: 992px) {
+    header div.header-text {
+        left: 4%;
+    }
+}
+
 header div.header-text h2 {
     font-size: 3em;
 }
@@ -302,53 +308,67 @@ span.stars {
     text-align: right;
 }
 
+@media (max-width: 992px) {
+
+}
+
 .star0 {
     transform: translateX(100vw);
+    -webkit-transform: translateX(100vw);
     transition: all 1.5s ease-in-out;
 }
 
 .slidein0 {
     transform: translateX(0vw);
+    -webkit-transform: translateX(0vw);
     transition: all 1.1s ease-in-out;
 }
 
 .star1 {
     transform: translateX(100vw);
+    -webkit-transform: translateX(100vw);
     transition: all 1.4s ease-in-out;
 }
 
 .slidein1 {
     transform: translateX(0vw);
+    -webkit-transform: translateX(0vw);
     transition: all 1.2s ease-in-out;
 }
 
 .star2 {
     transform: translateX(100vw);
+    -webkit-transform: translateX(100vw);
     transition: all 1.3s ease-in-out;
 }
 
 .slidein2 {
     transform: translateX(0vw);
+    -webkit-transform: translateX(0vw);
     transition: all 1.3s ease-in-out;
 }
 
 .star3 {
     transform: translateX(100vw);
+    -webkit-transform: translateX(100vw);
     transition: all 1.2s ease-in-out;
 }
 
 .slidein3 {
     transform: translateX(0vw);
+    -webkit-transform: translateX(0vw);
     transition: all 1.4s ease-in-out;
 }
 
 .star4 {
     transform: translateX(100vw);
+    -webkit-transform: translateX(100vw);
     transition: all 1.1s ease-in-out;
 }
 
 .slidein4 {
     transform: translateX(0vw);
+    -webkit-transform: translateX(0vw);
     transition: all 1.5s ease-in-out;
 }
 
@@ -379,6 +399,12 @@ span.stars {
 
 .nopadding{
     padding: 0 !important;
+}
+
+@media (min-width: 992px) {
+    .nopadding-md{
+        padding: 0 !important;
+    }
 }
 
 .portrait.zoomout {
