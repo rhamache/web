@@ -168,21 +168,24 @@
                 theButton.removeClass("btn-default");
                 theButton.addClass("btn-danger fa fa-coffee");
 
-                alert("You lost!");
+                
 
                 $.each($(".gamebtn"), function (i, v) {
                     $(v).addClass("disabled");
                     $(v).attr("disabled", "true");
                 });
+
+                alert("You lost!");
             } else {
                 self.checkButton(theButton);
 
                 if (self.revealedCount === (self.width * self.height) - self.mineCount) {
-                    alert("You win!");
+
                     $.each($(".gamebtn"), function (i, v) {
                         $(v).addClass("disabled");
                         $(v).attr("disabled", "true");
                     });
+                    alert("You win!");
                 }
             }
         }

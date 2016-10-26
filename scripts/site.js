@@ -40,4 +40,22 @@
             }
         });
     });
+
+
+    $("#code-carousel").on('slid.bs.carousel', function (e) {
+        currentIndex = $('#code-carousel div.active').index() + 1;
+        $("#website-blurb").hide();
+        $("#coffeesweeper-blurb").hide();
+        switch (currentIndex)
+        {
+            case 1: { 
+                $("#website-blurb").show();
+                break;
+            }
+            case 2: {
+                $("#coffeesweeper-blurb").show();
+                break;
+            }
+        }
+    });
 });

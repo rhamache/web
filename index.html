@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&#124;Julius+Sans+One&#124;Ubuntu" rel="stylesheet">
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="scripts/site.js"></script>
@@ -455,6 +455,7 @@
                 <div id="code-carousel" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#code-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#code-carousel" data-slide-to="1"></li>
                     </ol>
 
                     <div class="carousel-inner" role="listbox">
@@ -464,6 +465,13 @@
                             <div class="carousel-caption">
                                 <h3>ryanhamacher.com</h3>
                                 <p>Personal website built with Bootstrap and jQuery.</p>
+                            </div>
+                        </div>
+                        <div class="item code-carousel-img">
+                            <img class="code-carousel-img" hidden-xs"" src="media/coffeesweeper.png" alt="www.ryanhamacher.com">
+                            <div class="carousel-caption" style="color: #333;">
+                                <h3>Coffeesweeper</h3>
+                                <p>The Windows classic implemented in JavaScript.</p>
                             </div>
                         </div>
                     </div>
@@ -481,9 +489,11 @@
         </div>
         <div class="row">
             <div class="col-md-offset-1 col-md-10 col-xs-12 col-lg-offset-2 col-lg-8 content">
-                <p>This website is built from pure HTML, CSS and JavaScript. It leverages 
+                <p id="website-blurb">This website is built from pure HTML, CSS and JavaScript. It leverages 
                     bootstrap to sport a fully responsive design. The code is open source and 
                     available on <a href="https://github.com/rhamache/web">GitHub</a>.
+                </p>
+                <p id="coffeesweeper-blurb" style="display: none;"><a href="coffeesweeper.html">Coffeesweeper</a> is an implementation of the classic Windows game <a href="https://en.wikipedia.org/wiki/Microsoft_Minesweeper">Minesweeper</a>. It is written in JavaScript and uses Bootstrap and jQuery.
                 </p>
             </div>
         </div>
