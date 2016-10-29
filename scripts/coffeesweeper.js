@@ -357,24 +357,17 @@ var Stopwatch = function () {
 };
 
 var onlongtouch;
-var timer, lockTimer;
+var timer;
 var touchduration = 800;
 var longTouchEvent = new Event('longTouch');
 
-function touchstart(e) {
-    e.preventDefault();
-    if (lockTimer) {
-        return;
-    }
-    timer = setTimeout(onlongtouch, touchduration);
-    lockTimer = true;
+function touchstart() {
+    timer = setTimeout(onlongtouch, touchduration); 
 }
 
 function touchend() {
-    if (timer) {
+    if (timer)
         clearTimeout(timer);
-        lockTimer = false;
-    }
 }
 
 onlongtouch = function () {
