@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -11,256 +11,46 @@
     <link rel="stylesheet" type="text/css" href="css/site.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/coffeesweeper.css">
     <link rel="apple-touch-icon" href="/media/icons/WWW.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <meta property="description" content="CoffeeSweeper - A minesweeper clone" />
-    <meta property="og:title" content="CoffeeSweeper - A minesweeper clone" />
+    <meta property="description" content="Coffeesweeper - A minesweeper clone" />
+    <meta property="og:title" content="Coffeesweeper - A minesweeper clone" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="CoffeeSweeper is a recreation of the classic windows game, minesweeper." />
     <meta property="og:url" content="http://www.ryanhamacher.com" />
     <meta property="og:image" content="http://www.ryanhamacher.com/media/ryanhamacher.jpg" />
 </head>
 <body>
-    <style>
-        #gameBoard {
-            overflow: scroll;
-        }
-
-        .gamebtn {
-            min-height: 32px;
-            min-width: 32px;
-        }
-
-        #game-area {
-            margin-bottom: 200px;
-            margin-top: 20px;
-        }
-    </style>
-
-    <div class="container">
+    <div class="col-xs-10 col-xs-offset-1">
         <div class="row">
-            <div class="col-xs-12">
-            <div id="game-area">
-
-            </div>
+            <h1 class="text-center">
+                Coffeesweeper
+            </h1>
         </div>
+        <div class="row">
+            <p class="text-center">
+                A clone of the classic windows game, Minesweeper.
+            </p>
+            <p class="text-center">
+                Right click to mark a mine with a flag or question mark. On mobile devices, tap and hold the cell to mark mines.
+            </p>
+        </div>
+        <div id="game-area"></div>
+        <div class="row">
+            <p>
+                Built by <a href="http://www.ryanhamacher.com">Ryan Hamacher</a>. Open source and available on GitHub.
+            </p>
         </div>
     </div>
+    <script type="text/javascript" src="scripts/coffeesweeper.js"></script>
     <script type="text/javascript">
         $(function () {
-            var game = new MinesweeperGame("game-area");
+            var game = new CoffeesweeperGame("game-area");
             game.init();
         });
-
-        function getRandomInt(min, max) {
-            return Math.floor(Math.random() * (max - min + 1)) + min;
-        }
-
-        function MinesweeperGame(gameAreaId) {
-            this.$gameArea = $("#" + gameAreaId);
-            this.mineArr = [[]];
-            this.width = 0;
-            this.height = 0;
-            this.mineCount = 0;
-            this.revealedCount = 0;
-        }
-
-        MinesweeperGame.prototype.init = function() {
-            this.createOptionsArea();
-        };
-
-        MinesweeperGame.prototype.createOptionsArea = function () {
-            var self = this;
-
-            var html = "<div class='row'>\
-                <div class='form-group'>\
-                    <label class='col-sm-2'>Width</label>\
-                    <div class='col-sm-10'>\
-                        <input type='text' id='gameWidth' value='10'/>\
-                    </div>\
-                </div>\
-                <div class='form-group'>\
-                    <label class='col-sm-2'>Height</label>\
-                    <div class='col-sm-10'>\
-                        <input type='text' id='gameHeight' value='10'/>\
-                    </div>\
-                </div>\
-                <div class='form-group'>\
-                    <label class='col-sm-2'>Number of Mines</label>\
-                    <div class='col-sm-10'>\
-                        <input type='text' id='gameMineCount' value='5'/>\
-                    </div>\
-                </div>\
-                <div class='form-group'>\
-                    <div class='col-sm-10 col-sm-offset-2'>\
-                        <button class='btn btn-primary' id='gameStart'>Start</button>\
-                    </div>\
-                </div>\
-            </div>\
-            <div class='row'>\
-                <div class='col-sm-12' id='gameBoard'></div>\
-            </div>";
-
-            self.$gameArea.append(html);
-            $("#gameStart").click(function () {
-                self.createGameArea();
-            });
-        };
-
-        MinesweeperGame.prototype.createGameArea = function() {
-            var self = this;
-
-            self.revealedCount = 0;
-            self.width = $("#gameWidth").val();
-            self.height = $("#gameHeight").val();
-            self.mineCount = $("#gameMineCount").val();
-            var width = self.width;
-            var height = self.height;
-            var mineCount = self.mineCount;
-
-            self.mineArr = new Array(height);
-            var html = "<table><tbody>";
-            for (var i = 0; i < height; ++i) {
-                self.mineArr[i] = new Array(width);
-
-                html += "<tr>";
-                for (var j = 0; j < width; ++j) {
-                    self.mineArr[i][j] = false;
-                    html += "<td><button class='btn btn-xs btn-default gamebtn' data-row='" + i + "' data-col='" + j + "'></button></td>";
-                }
-                html += "</tr>";
-            }
-            html += "</tbody></table>";
-
-            for(var mi = 0; mi < mineCount; ++mi) {
-                var minePlaced = false;
-                while (!minePlaced) {
-                    var row = getRandomInt(0, height - 1);
-                    var col = getRandomInt(0, width - 1);
-                    if (self.mineArr[row][col] === false) {
-                        self.mineArr[row][col] = true;
-                        minePlaced = true;
-                    }
-                }
-            }
-
-            $("#gameBoard").html(html);
-            $(".gamebtn").click(function () {
-                self.gameButtonClicked($(this));
-            });
-            $(".gamebtn").bind("contextmenu",function(e){
-                e.preventDefault();
-                self.gameButtonRightClicked($(this));
-            });
-        }
-
-        MinesweeperGame.prototype.gameButtonClicked = function(theButton) {
-            var self = this;
-            if (theButton.hasClass("fa-flag")) {
-                return;
-            }
-
-            var row = theButton.data("row");
-            var col = theButton.data("col");
-            if (self.mineArr[row][col] === true) {
-                theButton.removeClass("btn-default");
-                theButton.addClass("btn-danger fa fa-coffee");
-
-                
-
-                $.each($(".gamebtn"), function (i, v) {
-                    $(v).addClass("disabled");
-                    $(v).attr("disabled", "true");
-                });
-
-                alert("You lost!");
-            } else {
-                self.checkButton(theButton);
-
-                if (self.revealedCount === (self.width * self.height) - self.mineCount) {
-
-                    $.each($(".gamebtn"), function (i, v) {
-                        $(v).addClass("disabled");
-                        $(v).attr("disabled", "true");
-                    });
-                    alert("You win!");
-                }
-            }
-        }
-
-        MinesweeperGame.prototype.checkButton = function(theButton) {
-            if (theButton.hasClass("revealed")) {
-                return;
-            }
-            theButton.removeClass("fa fa-question fa-flag");
-            theButton.addClass("revealed");
-            theButton.addClass("active");
-
-            var self = this;
-            self.revealedCount++;
-            var row = theButton.data("row");
-            var col = theButton.data("col");
-
-            var adjacentMineCount = self.getAdjacentMineCount(row, col);
-            
-            if (adjacentMineCount !== 0) {
-                theButton.text(adjacentMineCount);
-                theButton.addClass(adjacentMineCount);
-            } else {
-                var left = Math.max(0, col - 1);
-                var top = Math.max(0, row - 1);
-                var right = Math.min(self.width - 1, col + 1);
-                var bottom = Math.min(self.height - 1, row + 1);
-                
-                for(var i = top; i <= bottom; ++i) {
-                    for (var j = left; j <= right; ++j) {
-                        if (i === row && j === col) {
-                            continue;
-                        }
-                        var btn = $(".gamebtn[data-row='" + i + "'][data-col='" + j + "']");
-                        self.checkButton(btn);
-                    }
-                }
-            }
-        }
-
-        MinesweeperGame.prototype.getAdjacentMineCount = function(row, col) {
-            var self = this;
-            var left = Math.max(0, col - 1);
-            var top = Math.max(0, row - 1);
-            var right = Math.min(self.width - 1, col + 1);
-            var bottom = Math.min(self.height - 1, row + 1);
-            
-            var count = 0;
-            for(var i = top; i <= bottom; ++i) {
-                for (var j = left; j <= right; ++j) {
-                    if (i === row && j === col) {
-                        continue;
-                    }
-
-                    if (self.mineArr[i][j] === true) {
-                        ++count;
-                    }
-                }
-            }
-
-            return count;
-        }
-
-        MinesweeperGame.prototype.gameButtonRightClicked = function (theButton) {
-            if (theButton.hasClass("fa-flag")) {
-                theButton.removeClass("fa-flag");
-                theButton.addClass("fa-question");
-            } else if (theButton.hasClass("fa-question")) {
-                theButton.removeClass("fa-question");
-                theButton.removeClass("fa");
-            } else {
-                theButton.addClass("fa");
-                theButton.addClass("fa-flag");
-            }
-        }
     </script>
 </body>
 </html>

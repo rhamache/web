@@ -1,0 +1,14 @@
+﻿#gameBoard {
+    overflow: visible;
+    margin: 50px;
+}
+
+.gamebtn {
+    min-height: 32px;
+    min-width: 32px;
+}
+
+#game-area {
+    margin-bottom: 200px;
+    margin-top: 20px;
+}
