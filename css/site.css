@@ -319,8 +319,9 @@ span.stars {
     border-radius: 5px;
 }
 
-#abilities li:hover {
+#abilities li:hover, #abilities li.active-score {
     background-color: #eee;
+    cursor: pointer;
 }
 
 #abilities h3 {

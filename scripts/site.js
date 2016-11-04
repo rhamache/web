@@ -1,4 +1,10 @@
 ﻿$(function () {
+    $("#abilities li").click(function() {
+        $("#abilities li.active-score").removeClass("active-score");
+
+        $(this).addClass("active-score");
+    });
+
 
     // scroll effect for anchors
     $('a[href*="#"]:not([href="#"],[href="#code-carousel"])').click(function () {
