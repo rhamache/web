@@ -26,19 +26,6 @@
         } else {
             portrait.removeClass("zoomout");
         }
-
-        var wndH = $(window).height() - 200;
-
-        $("#abilities ul li span.fa").each(function (i, el) {
-            var idx = i % 5;
-            var el = $(el);
-            var top = el.offset().top
-            if (y > top - wndH) {
-                el.addClass("slidein" + idx);
-            } else {
-                el.removeClass("slidein" + idx);
-            }
-        });
     });
 
 

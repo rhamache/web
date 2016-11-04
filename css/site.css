@@ -87,6 +87,10 @@ header{
 
 }
 
+.score {
+    float: right;
+}
+
 footer{
     height: 100vh;
 }
@@ -296,66 +300,6 @@ span.stars {
 
 }
 
-.star0 {
-    transform: translateX(100vw);
-    -webkit-transform: translateX(100vw);
-    transition: all 1.5s ease-in-out;
-}
-
-.slidein0 {
-    transform: translateX(0vw);
-    -webkit-transform: translateX(0vw);
-    transition: all 1.1s ease-in-out;
-}
-
-.star1 {
-    transform: translateX(100vw);
-    -webkit-transform: translateX(100vw);
-    transition: all 1.4s ease-in-out;
-}
-
-.slidein1 {
-    transform: translateX(0vw);
-    -webkit-transform: translateX(0vw);
-    transition: all 1.2s ease-in-out;
-}
-
-.star2 {
-    transform: translateX(100vw);
-    -webkit-transform: translateX(100vw);
-    transition: all 1.3s ease-in-out;
-}
-
-.slidein2 {
-    transform: translateX(0vw);
-    -webkit-transform: translateX(0vw);
-    transition: all 1.3s ease-in-out;
-}
-
-.star3 {
-    transform: translateX(100vw);
-    -webkit-transform: translateX(100vw);
-    transition: all 1.2s ease-in-out;
-}
-
-.slidein3 {
-    transform: translateX(0vw);
-    -webkit-transform: translateX(0vw);
-    transition: all 1.4s ease-in-out;
-}
-
-.star4 {
-    transform: translateX(100vw);
-    -webkit-transform: translateX(100vw);
-    transition: all 1.1s ease-in-out;
-}
-
-.slidein4 {
-    transform: translateX(0vw);
-    -webkit-transform: translateX(0vw);
-    transition: all 1.5s ease-in-out;
-}
-
 .skill-header {
     text-align: center;
 }
@@ -371,6 +315,12 @@ span.stars {
 
 #abilities li {
     margin: 5px 0;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+#abilities li:hover {
+    background-color: #eee;
 }
 
 #abilities h3 {
